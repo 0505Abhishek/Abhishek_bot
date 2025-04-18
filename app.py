@@ -5,12 +5,11 @@ from dotenv import load_dotenv
 
 load_dotenv() 
 
-print(os.getenv("GEMINI_API_KEY"))
 
 app = Flask(__name__)
 
 client = OpenAI(
-    api_key=os.getenv("GEMINI_API_KEY"),
+    api_key=os.getenv("OPENAI_API_KEY"),
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
