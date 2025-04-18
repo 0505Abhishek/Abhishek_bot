@@ -1,11 +1,9 @@
 __pycache__/
-*.pyc
 instance/
 .env
 .env.*
 *.sqlite3
 *.db
 uploads/
-node_modules/
 .vscode/
 *.log
