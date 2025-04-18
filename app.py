@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv() 
 
+print(os.getenv("GEMINI_API_KEY"))
+
 app = Flask(__name__)
 
 client = OpenAI(
