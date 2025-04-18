@@ -1,15 +1,10 @@
-import os
 from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
-from dotenv import load_dotenv
-
-load_dotenv() 
-
 
 app = Flask(__name__)
 
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
+    api_key="AIzaSyC5bGY6zzld-pERmsvFbJeI6ZDjzM1uzw0",
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
@@ -33,6 +28,5 @@ def get_bot_response():
     history.append({'role': 'assistant', 'content': reply})
     return jsonify({'reply': reply})
 
-
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(debug=True)
