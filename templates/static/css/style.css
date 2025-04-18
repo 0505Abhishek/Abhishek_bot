@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, #0f0f0f 0%, #000000 100%);
+  color: #00f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.chat-container {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00f9ff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 0 30px #00f9ff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  padding: 16px;
+  background: #0a0a0a;
+  border-bottom: 2px solid #00f9ff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #0a0a0a;
+  border-top: 2px solid #00f9ff;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: black;
+  color: #00f9ff;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-area button {
+  background: #00f9ff;
+  border: none;
+  color: black;
+  padding: 0 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-area button:hover {
+  background: #00d4e0;
+}
+
+.bot, .user {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.user {
+  text-align: right;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.bot {
+  text-align: left;
+  background-color: rgba(0, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
