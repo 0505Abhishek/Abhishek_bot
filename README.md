@@ -30,6 +30,6 @@ This bot uses **Google's Gemini API** and is built with **Flask (Python)**.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/abhishek_bot.git
+git clone https://github.com/0505Abhishek/Abhishek_bot.git
 cd abhishek_bot
 pip install -r requirements.txt
