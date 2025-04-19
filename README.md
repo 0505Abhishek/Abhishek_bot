@@ -3,7 +3,7 @@
 Welcome to **Abhishek Bot** — an AI chatbot from the year 2080!  
 This bot uses **Google's Gemini API** and is built with **Flask (Python)**.
 
-![Abhishek Bot Screenshot]()
+![Abhishek Bot Screenshot](../public/Abhishek_bot_screenshot.png)
 
 ---
 
