@@ -1,6 +1,8 @@
 # 🤖 Abhishek Bot - Gemini Powered Chatbot
 
-Welcome to **Abhishek Bot** — an AI chatbot from the year 2080!  
+Try it live 👉 [Abhishek Bot](https://abhishekbot-production.up.railway.app/)
+
+Welcome to **Abhishek Bot** — It is my Persona!  
 This bot uses **Google's Gemini API** and is built with **Flask (Python)**.
 
 ![Abhishek Bot Screenshot](https://github.com/0505Abhishek/Abhishek_bot/blob/main/public/Abhishek_bot_screenshot.png)
