@@ -7,101 +7,122 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle, #0f0f0f 0%, #000000 100%);
-  color: #00f9ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.chat-container {
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid #00f9ff;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 480px;
-  box-shadow: 0 0 30px #00f9ff;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #0f0f0f 0%, #000000 100%);
+      color: #00f9ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
 
-.header {
-  padding: 16px;
-  background: #0a0a0a;
-  border-bottom: 2px solid #00f9ff;
-  text-align: center;
-  font-size: 20px;
-}
+    .chat-container {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #00f9ff;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 0 30px #00f9ff;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+    }
 
-.chat-window {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
-  min-height: 400px;
-  max-height: 500px;
-}
+    .header {
+      padding: 16px;
+      background: #0a0a0a;
+      border-bottom: 2px solid #00f9ff;
+      text-align: center;
+      font-size: 20px;
+    }
 
-.input-area {
-  display: flex;
-  padding: 10px;
-  background: #0a0a0a;
-  border-top: 2px solid #00f9ff;
-}
+    .chat-window {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+    }
 
-.input-area input {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  background: black;
-  color: #00f9ff;
-  font-size: 16px;
-  border-radius: 8px;
-  outline: none;
-}
+    .input-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      background: #0a0a0a;
+      border-top: 2px solid #00f9ff;
+    }
 
-.input-area button {
-  background: #00f9ff;
-  border: none;
-  color: black;
-  padding: 0 20px;
-  margin-left: 10px;
-  font-size: 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .input-area input {
+      flex: 1 1 70%;
+      padding: 12px;
+      border: none;
+      background: black;
+      color: #00f9ff;
+      font-size: 16px;
+      border-radius: 8px;
+      outline: none;
+      min-width: 0;
+    }
 
-.input-area button:hover {
-  background: #00d4e0;
-}
+    .input-area button {
+      flex: 0 0 auto;
+      background: #00f9ff;
+      border: none;
+      color: black;
+      padding: 12px 20px;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-.bot, .user {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  animation: fadeIn 0.5s ease-in;
-}
+    .input-area button:hover {
+      background: #00d4e0;
+    }
 
-.user {
-  text-align: right;
-  background-color: rgba(0, 255, 255, 0.1);
-}
+    .bot, .user {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      animation: fadeIn 0.5s ease-in;
+      word-wrap: break-word;
+    }
 
-.bot {
-  text-align: left;
-  background-color: rgba(0, 255, 255, 0.2);
-}
+    .user {
+      text-align: right;
+      background-color: rgba(0, 255, 255, 0.1);
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    .bot {
+      text-align: left;
+      background-color: rgba(0, 255, 255, 0.2);
+    }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 480px) {
+      .header {
+        font-size: 18px;
+      }
+
+      .input-area input {
+        font-size: 14px;
+      }
+
+      .input-area button {
+        font-size: 18px;
+        padding: 10px 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -113,6 +134,7 @@ body {
       <button onclick="sendMessage()">➤</button>
     </div>
   </div>
+
 
   <script>function sendMessage() {
     const input = document.getElementById("userInput");
